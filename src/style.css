@@ -1,0 +1,183 @@
+:root {
+  --color_link: #008ae6;
+  --font_sans: 'PT Sans', sans-serif;
+  --font_serif: 'PT Serif', serif;
+  --color_table-border: black;
+  --brown-light: #f7f2ee;
+  --light-grey: #eee;
+}
+
+/* --- Normalize styles */
+
+* { 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body { 
+  min-height: 100vh; 
+}
+
+/* --- */
+
+body {
+  font-family: var(--font_serif);
+}
+
+h2 {
+  text-align: center;
+  padding: 1rem;
+  font-family: var(--font_sans);
+}
+
+a:link, a:visited {
+  color: black;
+}
+
+p {
+  margin-top: 0;
+}
+
+p:last-child {
+  margin-bottom: 0;
+}
+
+ul {
+  padding-left: 1rem;
+  margin-top: 0;
+}
+
+ul:last-child {
+  margin-bottom: 0;
+}
+
+ul li {
+  display: inline-flex;
+}
+
+ul li {
+  padding: 0;
+  margin: 0;
+}
+
+/* Table */
+
+table {
+  width: 100%;
+}
+
+table, td, th {
+  border: 0;
+  border-collapse: collapse;
+  padding: 1rem;
+  vertical-align: top;
+}
+
+tbody tr {
+  text-align: left;
+}
+
+thead th,
+tbody th {
+  padding: 1rem;
+  vertical-align: top;
+}
+
+tr {
+  border-bottom: 1px solid black;
+}
+
+th:nth-child(1) {
+  width: 100px;
+}
+
+/* --- */
+
+.th-header {
+  font-weight: bold;
+  text-align: left;
+}
+
+.note {
+  display: block;
+  font-family: var(--font_sans);
+  font-size: .8rem;
+  letter-spacing: .6px;
+  font-weight: normal;
+}
+
+.header2 {
+  font-size: 1.5rem;
+}
+
+.typeface-examples-table {
+  display: grid;
+  overflow: hidden;
+  grid-template-columns: .2fr 1fr;
+  border-radius: .7rem;
+  margin: .5rem 0 1rem 0;
+  column-gap: .5rem;
+  font-size: .8rem;
+  letter-spacing: .6px;
+  line-height: 1.3rem;
+}
+
+.typeface-examples-table a {
+  text-underline-offset: 3px;
+}
+
+ol {
+  list-style-type: upper-roman;
+  padding-left: 1rem;
+}
+
+li > a, td > a, .types-group {
+  display: block;
+  background-color: #eee;
+  padding: .5rem .7rem .7rem .7rem;
+  border-radius: .5rem;
+}
+
+.dynamic {background-color: #f2f2f2;}
+.transitional {background-color: #e6e6e6;}
+.static {background-color: #d9d9d9;}
+.geometric {background-color: #cccccc}
+
+/* Collapsable text */
+
+.collapsible {
+  cursor: pointer;
+}
+
+.active, .collapsible:hover {
+  background-color: #ccc;
+}
+
+/* Under table */
+
+.outside-table ul {
+  display: list-item;
+  list-style-type: disc;
+  padding-left: 1rem;
+}
+
+.outside-table ul li {
+  display: list-item; 
+}
+
+/* Type group description pages */
+
+.group-description {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.typeface-examples {
+  padding: .7rem 0 .7rem 0;
+  border-radius: .7rem;
+}
+
+.header {
+  text-transform: uppercase;
+}
