@@ -25,6 +25,19 @@ body {
   font-family: var(--font_serif);
 }
 
+footer, .header-img {
+  background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/Metal_movable_type.jpg/1920px-Metal_movable_type.jpg");
+  background-position: 50% 60%;
+}
+
+.header-img {
+  height: 1em;
+}
+
+footer {
+  height: 100px;
+}
+
 h2 {
   text-align: center;
   padding: 1rem;
@@ -112,7 +125,7 @@ th:nth-child(1) {
 }
 
 .typeface-examples-table {
-  display: grid;
+  display: none;
   overflow: hidden;
   grid-template-columns: .2fr 1fr;
   border-radius: .7rem;
@@ -121,6 +134,7 @@ th:nth-child(1) {
   font-size: .8rem;
   letter-spacing: .6px;
   line-height: 1.3rem;
+  padding: 1rem;
 }
 
 .typeface-examples-table a {
@@ -129,7 +143,7 @@ th:nth-child(1) {
 
 ol {
   list-style-type: upper-roman;
-  padding-left: 1rem;
+  padding: 1rem 0 0 1rem;
 }
 
 li > a, td > a, .types-group {

@@ -2,8 +2,16 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 	<head>
 		<meta charset="utf-8" />
-		<title>Классификация текстовых шрифтов по логике формообразования (на основе таблицы А. Тарбеева)</title>
+    <title>Классификация текстовых шрифтов по логике формообразования (на основе таблицы А. Тарбеева)</title>
+    <!-- Meta -->
+    <meta charset="UTF-8">
+    <meta name="description" content="Free Web tutorials">
+    <meta name="keywords" content="HTML, CSS, JavaScript">
+    <meta name="author" content="John Doe">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- -->
     <link rel="stylesheet" media="screen" href="./style.css">  
+    <link rel="stylesheet" media="screen" href="./controls.css">  
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -31,7 +39,18 @@
   </head>
 <body>
 
+      <div class="header-img"></div>
+
       <h2>Классификация текстовых шрифтов по логике формообразования (на основе таблицы  А. Тарбеева)</h2>
+
+      <div class="controls">
+        <div class='control control_switch'>
+          <input class='control__system-control' id='switch1' type='checkbox'  name='switch'>
+          <label class='control__label control__label_switch show-tyoes' for='switch1'>
+            Скрыть названия шрифтов
+          </label>
+        </div>
+      </div>
 
 			<table>
         <thead>
@@ -55,7 +74,7 @@
               
               <ol>
                 <li>
-                  <a href="./serif_venetian.html">Венецианская (гуманистическая, humanist)</a>
+                  <a href="./serif_dynamic.html">Венецианская (гуманистическая, humanist)</a>
                   
                   <div class="typeface-examples-table">
                     <div>Кириллица</div>
@@ -241,7 +260,7 @@
                 <span class="note">Отчётливый контраст штрихов, отсутствие засечек</span>
 						</th>
 						<td>
-              <a href="sans-serif_dynamic-and-with-no-contrast.html">Динамический (он же ленточная антиква)</a>
+              <a href="sans-serif_dynamic.html">Динамический (он же ленточная антиква)</a>
               <div class="typeface-examples-table">
                 <div>Кириллица</div>
                 <div>
@@ -283,7 +302,7 @@
             </th>
             
 						<td>
-              <a href="sans-serif_dynamic-and-with-no-contrast.html">Динамический</a>
+              <a href="sans-serif_dynamic.html">Динамический</a>
               <div class="typeface-examples-table">
                 <div class="lang">Кириллица</div>
                 <div>
@@ -333,5 +352,8 @@
 				</tbody>
       </table>
 
+      <footer></footer>
+
+      <script type="text/javascript" src="./script.js"></script>
   </body>
   </html>

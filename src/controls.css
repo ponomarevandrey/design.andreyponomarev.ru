@@ -1,0 +1,151 @@
+/* Controls */
+
+.controls {
+  padding: 1rem;
+}
+
+/* Switch button  */
+
+.control {
+  /* make room for control: */
+  padding-left: 1.5rem;
+  margin-bottom: 1rem;
+  display: block;
+}
+
+/* hide default &__system-control but keep it accessible */
+.control__system-control {
+  z-index: -1;
+  position: absolute;
+
+  opacity: 0;
+}
+
+.control__tip {
+  /* 'div' is always a block level element but in case if you will replace 'div' in your markup  with 'span' for example, for such situations just for the sake of safety, we declare 'display: block' */
+  display: block;
+}
+
+/* Modifier for the switch: */
+.control_switch {
+  /* make room for the switch, cause it is wider than checkbox: */
+  padding-left: 2.6rem;
+}
+
+.control__label {
+  position: relative;
+  /* make it not a 'block', but 'inline-block' to prevent it from occupying 100% of the width, creating a blank clickable area to the right of the label text: */
+  display: inline-block;
+}
+
+/* define sime common styles for any checkboxes,
+// radio buttons and switches: */
+
+/* create the foundation for the future checkbox/radio btn/switch: */
+.control__label:before {
+  position: absolute;
+  top: 0.25rem;
+  left: -1.5rem;
+
+  display: block;
+  width: 1rem;
+  height: 1rem;
+  box-sizing: border-box;
+
+  background-color: #ccc;
+
+  content: "";
+}
+
+/* create the foundation for the future
+// radio dot/checkmark//switch circle button: */
+.control__label:after {
+  position: absolute;
+  left: -1.5rem;
+  top: 0.25rem;
+
+  box-sizing: border-box;
+  /* by default, hide custrom control dot/checkmark: */
+  display: none;
+  /* custrom control dot/checkmark styles: */
+  width: 1rem;
+  height: 1rem;
+
+  content: "";
+}
+
+/**********
+  * Switch *
+  **********/
+
+/* add custom switch styles: */
+.control__label_switch:before {
+  top: 0.25rem;
+  left: -2.6rem; /* = .control_switch's padding-left value */
+
+  width: 2rem;
+  height: 1rem;
+
+  /*background-color: #ccc;*/
+  transition: 0.4s;
+  border: green; /* $form__border_state_initial; */
+  border-radius: 10000px;
+}
+
+/* add switch button styles: */
+.control__label_switch:after {
+  /* left = &_switch:before's 'left' property + 2px (2px is for border) */
+  left: calc(-2.6rem + 2px);
+  /* top = &_switch:before's 'top' property + 2px (2px is for border) */
+  top: calc(0.25rem + 2px);
+  z-index: 1;
+
+  display: block;
+  /* height = height of switch - 2px (for borders) - 2px (for the gap between the button and the switch container) */
+  height: calc(1rem - 4px);
+  /* same logic goes for width */
+  width: calc(1rem - 4px);
+
+  background-color: black;
+  border-radius: 50%;
+  transition: all 0.4s ease;
+}
+
+/*************************************
+  * default modifiers (when checked): *
+  *************************************/
+
+/* show the checkmark/dot: */
+.control__system-control:checked ~ .control__label:after {
+  display: block;
+}
+/* style control: */
+.control__system-control:checked ~ .control__label:before {
+  background-color: black;
+}
+/* and after__ it is deselected: */
+.control__system-control:focus ~ .control__label:before {
+  box-shadow: #ccc /*$form__box-shadow_state_initial;*/
+}
+/* modifier for switch to override some of the beforementioned rules:
+// show the checkmark: */
+.control__system-control:checked ~ .control__label_switch:after {
+  background-color: white;
+  left: calc(-1.6rem + 2px);
+}
+/* style control: */
+.control__system-control:checked ~ .control__label_switch:before {
+  background-color: black;
+}
+
+/*************
+ * _disabled *
+ *************/
+
+.control__system-control_disabled ~ .control__label,
+.control__system-control_disabled ~ .control__tip {
+  outline: none;
+  opacity: 0.4;
+
+  cursor: not-allowed;
+}
